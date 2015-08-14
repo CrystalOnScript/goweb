@@ -125,19 +125,19 @@
                                 </div>
                                 <div>
                                     <div>Bluetooth</div>
-                                    <div>Bluetooth API</div>
+                                    <div><a href="http://webbluetoothcg.github.io/web-bluetooth/">Web Bluetooth</a></div>
                                 </div>
                                 <div>
                                     <div>Camera access</div>
-                                    <div><a href="http://w3c.github.io/mediacapture-main/getusermedia.html">getUserMedia()</a></div> 
+                                    <div><a href="http://caniuse.com/#feat=stream">getUserMedia</a></div> 
                                 </div>
                                 <div>
                                     <div>Gaming enabled</div>
-                                    <div>Gamepad API</div> 
+                                    <div><a href="http://caniuse.com/#feat=gamepad">Gamepad</a></div> 
                                 </div>
                                 <div>
                                     <div>Location Aware</div>
-                                    <div>Geolocation API</div>
+                                    <div><a href="http://caniuse.com/#feat=geolocation">Geolocation</a></div>
                                 </div>
                                 <div>
                                     <div>Home screen</div>
@@ -145,7 +145,7 @@
                                 </div>
                                 <div>
                                     <div>Immersion</div>
-                                    <div>Orientation &amp; Pointer Lock and Full Screen APIs</div>
+                                    <div><a href="http://caniuse.com/#feat=deviceorientation">Orientation</a>, <a href="http://caniuse.com/#feat=pointerlock">Pointer Lock</a> and <a href="http://caniuse.com/#feat=fullscreen">Full Screen APIs</a></div>
                                 </div>
                                 <div>
                                     <div>Notifications</div>
@@ -153,7 +153,7 @@
                                 </div>
                                 <div>
                                     <div>Streaming media</div>
-                                    <div>WebRTC</div>
+                                    <div><a href="http://caniuse.com/#feat=rtcpeerconnection">WebRTC</a></div>
                                 </div>
                             </div>
                         </div>
@@ -190,6 +190,17 @@
 
                     <p>Building for the web means building across operating systems and devices. While there are always browser differences, device differences, and UI considerations, the same set of developers can handle the workload for all of them, making the entire development cycle much less expensive. Hiring individual talent for each platform is much more risky and difficult, and porting apps to multiple programming languages is a lengthy maintenance nightmare.</p>
 
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>Develop once, be on all platforms and devices.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Especially content heavy apps and sites that want to maximize distribution.</td>
+                        </tr>
+                    </table>
+
                     <aside>
                         <h3>Real-world data</h3>
                         <p>Netflix <a href="http://techblog.netflix.com/2013/12/pioneering-application-design-on-tvs-tv.html">uses web technologies</a> to bring its app to almost every platform imaginable.</p>
@@ -209,6 +220,17 @@
                     <p>While native apps currently provide more discoverability than the web through custom app stores, the web has an unbeatable ability to be found, especially if your site is content heavy. Provided that your site is freely accessible, search engines index all of the content within your app or site and make it available for their users. The more content and sub pages, the more doors open for your visitors. A native app usually only has a single point of entry*.</p>
 
                     <p>* the new deep linking feature for Android resolves this issue for apps but requires opt-in and custom code.</p>
+
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>Deep indexing of your content opens entry points from search engines.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Everything content and keyword-heavy, featuring lots of sub pages.</td>
+                        </tr>
+                    </table>
 
                     <aside>
                         <h3>Real-world data</h3>
@@ -231,6 +253,17 @@
                     <p>In contrast, native apps are bound to update delays and reviews that often take up to two weeks, depending on the vendor. When the update arrives, installation often requires the explicit agreement of the user.</p>
 
                     <p>It’s no coincidence that many news sites embrace the mobile web. If your app demands to be fresh at all times for all of your users, choose the web.</p>
+
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>Web apps and sites are remotely hosted and up to date by default, for 100% of your visitors.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>News sites, highly dynamic games with large user bases that need constant updates, everything that needs to stay fresh, for everyone, at all times.</td>
+                        </tr>
+                    </table>
                 </article>
             </div>
 
@@ -246,6 +279,17 @@
                     <p>While it is difficult to build native apps that stream and lazy-load content and logic when needed, web apps and sites are naturally able to amend their logic and content after the initial page load. Only the web platform gives you the ability to create the impression of an instant load.</p>
 
                     <p>As web apps don’t have to be distributed in a single container, it’s perfectly valid to preload the first visible content and make it available to the user in less than a second, then lazy-load the rest of it without the user's awareness. While performance during runtime is a different topic, the web cannot be beaten if your goal is the immediate availability of your app.</p>
+
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>The web can deliver apps and sites that are preloaded in less than a second.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Any apps and sites that are short-lived (per visit) in nature. People will wait for a long game, but not for an utility app (i.e. displaying the weather).</td>
+                        </tr>
+                    </table>
                 </article>
             </div>
 
@@ -261,6 +305,17 @@
                     <p>Corporate controlled App Stores, for all their advantages, come with strings attached. Their offerings are controlled and shaped to match the culture of the platform organization, thus excluding or severely restricting whole categories of apps that are perfectly legal but not wanted. Other restrictions can apply when your app competes with a OS provided app or when your app wants to use a different payment provider. The App Store’s approval process is often a black box and there is little room for discussion or dealing with ambiguously rejected apps.</p>
 
                     <p>To be truly independent and free of fear of censorship, you have to embrace the open web. If you are building an adult entertainment or file sharing app, or prefer PayPal as payment method, go web.</p>
+
+                     <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>The web does not censor content or disallow different payment providers and is an even playing field for all.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Adult entertainment, file sharing or gambling apps, apps that want to choose a different payment provider than the OS default.</td>
+                        </tr>
+                    </table>                   
                 </article>
             </div>
 
@@ -278,6 +333,17 @@
                     <p>The point of entry for web sites and apps is entirely effortless. This is important for more than security reasons. What if your app is only needed twice a year? Even if you get somebody to install these types of apps, the stickiness of the home screen isn’t any help. Studies show that there’s a <a href="http://techcrunch.com/2014/07/01/an-upper-limit-for-apps-new-data-suggests-consumers-only-use-around-two-dozen-apps-per-month/">clear upper limit for individual app usage per month</a>. If your app is used less often, it’ll be forgotten quickly after it’s installed. Instead, what if your app were only a Google search away, instantly available when users need it, and gone when they don’t?</p>
 
                     <p>Finally, installation-free also means risk-free tryouts. Few native app stores offer the ability to give what the web offers by default: the ability to try an app before buying it.</p>
+
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>Clicking on a link is effortless compared to installing a native app.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Apps that are rarely used, apps that need to be tried first, apps that seem risky to install.</td>
+                        </tr>
+                    </table> 
 
                     <aside>
                         <h3>Real-world data</h3>
@@ -301,6 +367,17 @@
                     <p>Sure, you could share achievements out to Facebook or Twitter from an Xbox game, but there’s a gap. How does the person who sees your share get into the game? If it was built on the open web, all she would literally have to do is click on the provided link. What if shareable interactions are part of the game itself? For example, within a trivia app you could forward individual questions as links to your followers on Twitter. Your followers could answer the questions and get hooked on the game without installing anything. We can likely agree that this has more impact than a link to a native app or a link to an ad for console game.</p>
 
                     <p>Of course, all of this applies to more than just games. Almost all web apps and sites profit from links that interconnect them and make the web flow.</p>
+
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>The web has the best sharing mechanism in the world, built in.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Social games and other apps that can utilize sharing as part of the functionality. Any app that distributes best through word of mouth.</td>
+                        </tr>
+                    </table>
                 </article>
             </div>
 
@@ -324,6 +401,17 @@
                         <img src="img/space-jam.jpg" alt="Space Jam Website">
                         <p>The <a href="http://www.warnerbros.com/archive/spacejam/movie/jam.htm">Space Jam promotion site</a>, built in 1996, is still alive and kicking!</p>
                     </aside>
+
+                    <table class="wrapup">
+                        <tr>
+                            <td>TL;DR</td>
+                            <td>Your web app will still run 20 years from now, even if you abandon its development.</td>
+                        </tr>
+                        <tr>
+                            <td>Who profits?</td>
+                            <td>Everyone.</td>
+                        </tr>
+                    </table>
                 </article>
             </div>
 

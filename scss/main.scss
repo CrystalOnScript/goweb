@@ -38,6 +38,28 @@ article {
     width: 750px;
 }
 
+table.wrapup {
+
+    border-top: 1px solid #f7f7f7;
+
+    tr td {
+        padding-top: 0.3em;
+        vertical-align: top;
+    }
+
+    tr:first-child td {
+        padding-top:: 1em;
+        &:last-child {
+            color: $darkblue;
+        }
+    }
+
+    td:first-child {
+        font-weight: 700;
+        width: 22%;
+    }
+}
+
 aside {
 	border-left: 1px solid #f0f0f0;
     position: absolute;
