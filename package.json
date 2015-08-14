@@ -1,0 +1,25 @@
+{
+  "name": "goweb",
+  "version": "1.0.0",
+  "description": "A WIP explainer on when and why to choose the we for a project.",
+  "author": "Paul Bakaus <paul.bakaus@gmail.com>",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbakaus/goweb"
+  },
+  
+  "dependencies": {
+  },
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-eslint": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*"
+  },
+  
+  "license": "MIT"
+}
