@@ -2,7 +2,7 @@
 @import 'root';
 
 .main {
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 .head {
@@ -33,11 +33,6 @@
 
 }
 
-article {
-	max-width: calc(100% - 240px);
-    width: 750px;
-}
-
 table.wrapup {
 
     border-top: 1px solid #f7f7f7;
@@ -45,6 +40,7 @@ table.wrapup {
     tr td {
         padding-top: 0.3em;
         vertical-align: top;
+        padding: 0.5em;
     }
 
     tr:first-child td {
@@ -57,6 +53,7 @@ table.wrapup {
     td:first-child {
         font-weight: 700;
         width: 22%;
+        background: $bglight;
     }
 }
 
@@ -68,6 +65,7 @@ aside {
     width: 168px;
     border-radius: 2px;
     padding: 0 1em;
+    display: none;
 
     p {
     	font-size: 16px;
@@ -88,6 +86,14 @@ aside {
 
 @media only screen and (min-width: 768px) {
 
+    body {
+        font:18px/1.4 $serif;
+    }
+
+    .main {
+        padding: 30px 0;
+    }
+
 	h2 {
 		font-size: 2em;
 	}
@@ -95,6 +101,15 @@ aside {
 	.head .wrapper p {
 		font-size: 2em;
 	}
+
+    article {
+        max-width: calc(100% - 240px);
+        width: 750px;
+    }
+
+    aside {
+        display: block;
+    }
 	
 
 }

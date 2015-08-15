@@ -1,6 +1,11 @@
 @import '_theme';
 
 footer {
-	text-align: center;
 	color: rgba(0,0,0,0.5);
+	background: $blue;
+	color: #fff;
+	padding: 2em 0;
+	a {
+		color: #fff;
+	}
 }
