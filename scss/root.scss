@@ -28,6 +28,14 @@ h1,h2,h3,h4,h5 {
 	font-weight: 400;
 }
 
+h2 a:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -20px; 
+  height: 20px; 
+  visibility: hidden; 
+}
+
 a {
 	color: $blue;
 }

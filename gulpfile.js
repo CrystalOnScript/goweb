@@ -4,6 +4,7 @@ var eslint = require('gulp-eslint');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 var scriptsGlob = 'js/**/*.js';
@@ -23,7 +24,12 @@ gulp.task('copy', function() {
 // Sass
 gulp.task('sass', function() {
     return gulp.src(stylesGlob)
+        .pipe(sourcemaps.init())
         .pipe(sass())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions']
+          }))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist/css'))
         .pipe(browserSync.stream());
 });
@@ -31,10 +37,10 @@ gulp.task('sass', function() {
 // Concatenate & Minify JS
 gulp.task('scripts', function() {
   return gulp.src(scriptsGlob)
-      .pipe(sourcemaps.init())
+      //.pipe(sourcemaps.init())
       .pipe(concat('app.js'))
       .pipe(uglify())
-      .pipe(sourcemaps.write())
+      //.pipe(sourcemaps.write())
       .pipe(gulp.dest('dist/'));
 });
 

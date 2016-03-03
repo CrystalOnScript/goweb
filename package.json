@@ -18,7 +18,8 @@
     "gulp-eslint": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
-    "gulp-uglify": "*"
+    "gulp-uglify": "*",
+    "gulp-autoprefixer": "*"
   },
   
   "license": "MIT"
