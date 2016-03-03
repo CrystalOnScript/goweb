@@ -9,9 +9,18 @@
 	padding-bottom: 30px;
 	font-size: 16px;
 
+	.extra-wrapper {
+		display: flex;
+		margin: 0 -1em;
+		flex-wrap: wrap;
+	}
+
 	.box {
 		display: flex;
 		flex-direction: column;
+		flex: 1 1;
+		margin: 0 1em;
+		min-width: 16em;
 
 		p {
 			margin-top: 0;
@@ -100,24 +109,19 @@
 
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 916px) {
 
-.teaser {
-	.extra-wrapper {
-		display: flex;
-		margin: 0 -1em;
-	}
+	.teaser {
 
-	.box {
-		flex: 1 1;
-		margin: 0 1em;
-		h2 {
-			height: 3em;
-		}
-		p {
-			height: 5em;
+
+		.box {
+			h2 {
+				height: 3em;
+			}
+			p {
+				height: 5em;
+			}
 		}
 	}
-}
 
 }
