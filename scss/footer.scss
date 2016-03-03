@@ -5,7 +5,13 @@ footer {
 	background: $blue;
 	color: #fff;
 	padding: 2em 0;
+
 	a {
 		color: #fff;
+	}
+
+	small {
+		display: block;
+		opacity: 0.7;
 	}
 }
