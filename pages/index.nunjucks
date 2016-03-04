@@ -64,7 +64,6 @@
             </div>
 
             <div class="lead-in wrapper">
-                <h2>Explore what the web has to offer.</h2>
                 The web is {% for capability in front.capabilities %}<a href="#{{capability.developer|lower|replace(" ", "-")}}">{{capability.developer}}</a>{% endfor %}
             </div>
             
