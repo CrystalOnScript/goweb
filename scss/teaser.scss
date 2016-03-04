@@ -3,11 +3,14 @@
 .teaser {
 
 	border-top: 2px solid #f7f7f7;
-
 	margin-top: 3em;
 	margin-bottom: 3em;
 	padding-bottom: 30px;
 	font-size: 16px;
+
+	h2 {
+		min-height: 3em;
+	}
 
 	.extra-wrapper {
 		display: flex;
@@ -18,7 +21,7 @@
 	.box {
 		display: flex;
 		flex-direction: column;
-		flex: 1 1;
+		flex: 1 1 30%;
 		margin: 0 1em;
 		min-width: 16em;
 
@@ -33,78 +36,66 @@
 		}
 
 		&.apis {
-			.list {
-				background: #FFB700;
-				div > div {
-					color: #fff;
-					background: #FFB700;
-					&:first-child {
-						background: #FF8F00;
-						color: #FFF7D9;
-					}
+			dl {
+				background-image: linear-gradient(to right, #FF8F00, #FF8F00 50%, #FFB700 50%);
+				dt {
+					color: #FFF7D9;
 				}
 			}
 		}
 
 		&.industries {
-			.list {
-				background: #E4004F;
-				div > div {
-					color: #fff;
-					background: #E4004F;
-					&:first-child {
-						background: #B50048;
-						color: #FBDCE7;
-					}
+			dl {
+				background-image: linear-gradient(to right, #B50048, #B50048 50%, #E4004F 50%);
+				dt {
+					color: #FBDCE7;
 				}
 			}
 		}
 
-	}
+		dl {
 
-	.list {
-
-		font-family: $sans-serif;
-		flex-grow: 1;
-		background: $blue;
-
-		a {
-			color: #fff;
-		}
-
-		> div {
+			font-family: $sans-serif;
+			flex-grow: 1;
+			background-image: linear-gradient(to right, $darkblue, $darkblue 50%, $blue 50%);
 			display: flex;
-			background: #fff;
+			flex-wrap: wrap;
+			align-content: flex-start;
+			margin: 0;
 
-			div {
-				flex: 1 1;
-				
+			a {
 				color: #fff;
-				background: $blue;
+			}
+
+			dt,
+			dd {
+				width: 50%;
+				margin: 0;
+				box-sizing: border-box;
 				padding: 5px 10px;
 				border-bottom: 1px solid rgba(0,0,0,0.1);
-
-				&:first-child {
-					background: $darkblue;
-					border-bottom: 1px solid rgba(255,255,255,0.1);
-					color: #93D5FF;
-				}
-				
 			}
+
+			dt {
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+				color: #93D5FF;
+			}
+
+			dd {
+				color: #fff;
+			}
+
+			dd:first-of-type, dt:first-of-type {
+				background: #f7f7f7;
+    			color: #222;
+			}
+
+			dd:last-of-type, dt:last-of-type {
+				border-bottom: 0;
+			}
+
 		}
 
-	}
-
-	.box .list > div.heading {
-		background: $bglight;
-		div {
-			background: transparent;
-			color: #222;
-			&:first-child {
-				background: transparent;
-				color: #222;
-			}
-		}
 	}
 
 }
@@ -112,8 +103,6 @@
 @media only screen and (min-width: 916px) {
 
 	.teaser {
-
-
 		.box {
 			h2 {
 				height: 3em;

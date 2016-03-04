@@ -1,0 +1,3 @@
+<p>While it is difficult to build native apps that stream and lazy-load content and logic when needed, web apps and sites are naturally able to amend their logic and content after the initial page load. Only the web platform gives you the ability to create the impression of an instant load.</p>
+
+<p>As web apps don’t have to be distributed in a single container, it’s perfectly valid to preload the first visible content and make it available to the user in less than a second, then lazy-load the rest of it without the user's awareness. While performance during runtime is a different topic, the web cannot be beaten if your goal is the immediate availability of your app.</p>

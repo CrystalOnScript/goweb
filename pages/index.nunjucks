@@ -1,0 +1,105 @@
+{% extends "layout.nunjucks" %}
+{% block content %} 
+            <div class="wrapper">
+                <article>
+                    <p>The web platform offers unique capabilities and advantages over native, depending on the context of your site and app.</p>
+
+                    <p>Read on to discover when you should choose the web over native and when not, and walk through some unique user-facing abilities and features the open web provides.</p>
+                </article>
+            </div>
+
+            <div class="teaser">
+                <div class="wrapper">
+                    <div class="extra-wrapper">
+                        <div class="box">
+                            <h2><a name="at-a-glance"></a>Uniquely web. For everyone.</a></h2>
+                            <dl>
+                                <dt>To Developers</dt>
+                                <dd>To Users</dd>
+
+                                {% for capability in front.capabilities %}
+                                <dt>{{capability.developer}}</dt>
+                                <dd>{{capability.user}}</dd>
+                                {% endfor %}
+                            </dl>
+                            <p>The capabilities the web offers to you translate to a great experience for users.</p>
+                        </div>
+                        <div class="box apis">
+                            <h2>First class apps, cross-platform.</h2>
+                            <dl>
+                                <dt>Capability</dt>
+                                <dd>Developer API</dd>
+
+                                {% for featureGroup, apis in front.featureGroups %}
+                                <dt>{{featureGroup}}</dt>
+                                <dd>
+                                {% for apiTitle, apiLink in apis %}
+                                <a href="{{apiLink}}">{{apiTitle}}</a>
+                                {% endfor %}
+                                </dd>
+                                {% endfor %}
+                            </dl>
+                            <p>Apps built on the web can now offer users the same capabilities as native apps.</p>
+                        </div>
+
+                        <div class="box industries">
+                            <h2>Industry leading.</h2>
+                            <dl>
+                                <dt>Industry</dt>
+                                <dd>Examples</dd>
+
+                                <dt>eCommerce</dt>
+                                <dd>Amazon, Etsy</dd>
+
+                                <dt>Publishing</dt>
+                                <dd>Wikipedia, CNN, Buzzfeed</dd>
+
+                                <dt>Video</dt>
+                                <dd>YouTube</dd>
+                            </dl>
+                            <p>The web is where we buy and consume. Today more than ever.</p>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+
+            {% for capability in front.capabilities %}
+            <div class="item">
+
+                <div class="heading">
+                    <h2 class="wrapper">
+                        <a name="{{capability.developer|lower}}">{{capability.developer}}</a>
+                        {{capability.user}}
+                    </h2>
+                </div>
+
+                <div class="wrapper">
+                    <article>
+                        {% include "snippets/" + capability.developer|lower|replace(" ", "-") + ".nunjucks" %}
+
+                        <table class="wrapup">
+                            <tr>
+                                <td>TL;DR</td>
+                                <td>{{capability.tldr|safe}}</td>
+                            </tr>
+                            <tr>
+                                <td>Who benefits?</td>
+                                <td>{{capability.for|safe}}</td>
+                            </tr>
+                        </table>
+
+                        {% if capability.data %}
+                        <aside>
+                            <h3>Real-world data</h3>
+                            {% for point in capability.data %}
+                            <p>{{point|safe}}</p>
+                            {% endfor %}
+                        </aside>
+                        {% endif %}
+                    </article>
+                </div>
+
+            </div>
+            {% endfor %}
+           
+{% endblock %}

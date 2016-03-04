@@ -1,0 +1,21 @@
+                <nav>
+                    <ul>
+                        <li><a href="#">Preamble</a></li>
+                        <li><a href="#at-a-glance">At a glance</a></li>
+                        <li class="divider">The web is..</li>
+                        <li><a href="#cross-platform">Cross-platform</a></li>
+                        <li><a href="#indexed">Indexed</a></li>
+                        <li><a href="#auto-versioned">Auto-versioned</a></li>
+                        <li><a href="#composable">Composable</a></li>
+                        <li><a href="#independent">Independent</a></li>
+                        <li><a href="#frictionless">Easily deployed</a></li>
+                        <li><a href="#linkable">Linkable</a></li>
+                        <li><a href="#long-lasting">Long lasting</a></li>
+                    </ul>
+                </nav>
+
+                <div id="nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>Menu
+                </div>

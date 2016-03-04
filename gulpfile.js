@@ -1,18 +1,39 @@
 var gulp = require('gulp');
+var data = require('gulp-data');
+var fs = require('fs');
 var concat = require('gulp-concat');
 var eslint = require('gulp-eslint');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var nunjucksRender = require('gulp-nunjucks-render');
 var browserSync = require('browser-sync').create();
 
 var scriptsGlob = 'js/**/*.js';
 var stylesGlob = 'scss/**/*.scss';
+var pagesGlob = 'pages/**/*.+(html|nunjucks)';
+var templatesGlob = 'templates/**/*.+(html|nunjucks)';
+
+function getNunjucksData() {
+  var front = JSON.parse(fs.readFileSync('data/front.json'));
+  return {
+    front: front
+  };
+}
+
+gulp.task('nunjucks', function() {
+  return gulp.src(pagesGlob)
+    .pipe(data(getNunjucksData))
+    .pipe(nunjucksRender({
+      path: 'templates'
+    }))
+    .pipe(gulp.dest('dist'))
+});
+
 
 gulp.task('copy', function() {
     gulp.src([
-    	'index.html',
     	'favicon.ico'
       ], { base: './' })
       .pipe(gulp.dest('dist/'));
@@ -72,10 +93,12 @@ gulp.task('watch', function() {
 
     gulp.watch(scriptsGlob, ['scripts']);
     gulp.watch(stylesGlob, ['sass']);
-    gulp.watch('index.html', ['copy']).on('change', browserSync.reload);
+    gulp.watch(pagesGlob, ['nunjucks']).on('change', browserSync.reload);
+    gulp.watch(templatesGlob, ['nunjucks']).on('change', browserSync.reload);
+    gulp.watch('data/**/*.json', ['nunjucks']).on('change', browserSync.reload);
 
 });
 
 // Default Task
-gulp.task('default', ['copy', 'sass', 'scripts', 'watch']);
-gulp.task('dist', ['copy', 'sass-dist', 'scripts-dist']);
+gulp.task('default', ['nunjucks', 'copy', 'sass', 'scripts', 'watch']);
+gulp.task('dist', ['nunjucks', 'copy', 'sass-dist', 'scripts-dist']);

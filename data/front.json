@@ -1,0 +1,94 @@
+{
+	"capabilities": [
+		{
+			"user": "everywhere",
+			"developer": "cross-platform",
+			"tldr": "Develop once, be on all platforms and devices.",
+			"for": "Especially content heavy apps and sites that want to maximize distribution.",
+			"data": [
+				"Netflix <a href='http://techblog.netflix.com/2013/12/pioneering-application-design-on-tvs-tv.html'>uses web technologies</a> to bring its app to almost every platform imaginable."
+			]
+		},
+		{
+			"user": "searchable",
+			"developer": "indexed",
+			"tldr": "Deep indexing of your content opens entry points from search engines.",
+			"for": "Everything content and keyword-heavy, featuring lots of sub pages.",
+			"data": [
+				"<p><a href='https://stats.wikimedia.org/wikimedia/squids/SquidReportClients.htm'>Wikipedia has 38x mobile traffic to web over app</a>"
+			]
+		},
+		{
+			"user": "always up-to-date",
+			"developer": "auto-versioned",
+			"tldr": "Web apps and sites are remotely hosted and up to date by default, for 100% of your visitors.",
+			"for": "News sites, highly dynamic games with large user bases that need constant updates, everything that needs to stay fresh, for everyone, at all times."
+		},
+		{
+			"user": "instantly loaded",
+			"developer": "composable",
+			"tldr": "The web can deliver apps and sites that are preloaded in less than a second.",
+			"for": "Any apps and sites that are short-lived (per visit) in nature. People will wait for a long game, but not for an utility app (i.e. displaying the weather)."
+		},
+		{
+			"user": "independent",
+			"developer": "limitless",
+			"tldr": "The web does not censor content or disallow different payment providers and is an even playing field for all.",
+			"for": "Adult entertainment, file sharing or gambling apps, apps that want to choose a different payment provider than the OS default."
+		},
+		{
+			"user": "just a click away",
+			"developer": "easily deployed",
+			"tldr": "Clicking on a link is effortless compared to installing a native app.",
+			"for": "Apps that are rarely used, apps that need to be tried first, apps that seem risky to install.",
+			"data": [
+				"<a href='http://info.localytics.com/blog/app-retention-improves'>20% of native apps</a> are used only once.",
+				"<a href='http://www.slideshare.net/LudovicP/comscore-us-mobile-app-report-june-2014-datatheusmobileappreport'>75% of time is spent in the top four native apps.</a>"
+			]
+		},
+		{
+			"user": "viral",
+			"developer": "linkable",
+			"tldr": "The web has the best sharing mechanism in the world, built in.",
+			"for": "Social games and other apps that can utilize sharing as part of the functionality. Any app that distributes best through word of mouth."
+		},
+		{
+			"user": "long lasting",
+			"developer": "evergreen",
+			"tldr": "Your web app will still run 20 years from now, even if you abandon its development.",
+			"for": "Everyone.",
+			"data": [
+				"<img src='img/space-jam.jpg' alt='Space Jam Website'>The <a href='http://www.warnerbros.com/archive/spacejam/movie/jam.htm'>Space Jam promotion site</a>, built in 1996, is still alive and kicking!"
+			]
+		},
+		{
+			"user": "secure",
+			"developer": "secure",
+			"tldr": "",
+			"for": ""
+		}
+	],
+	"featureGroups": {
+		"Sensors": {
+			"Web Bluetooth": "http://webbluetoothcg.github.io/web-bluetooth/",
+			"Web USB": "https://wicg.github.io/webusb/",
+			"Geolocation": "http://caniuse.com/#feat=geolocation",
+			"Orientation": "http://caniuse.com/#feat=deviceorientation"
+		},
+		"Multimedia": {
+			"getUserMedia": "http://caniuse.com/#feat=stream",
+			"WebRTC": "http://caniuse.com/#feat=rtcpeerconnection"
+		},
+		"Gaming": {
+			"Gamepad": "http://caniuse.com/#feat=gamepad",
+			"WebGL": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API",
+			"Pointer Lock": "http://caniuse.com/#feat=pointerlock"
+		},
+		"OS Integration": {
+			"Web App Manifest": "https://w3c.github.io/manifest/",
+			"Theme-color": "https://developers.google.com/web/fundamentals/design-and-ui/browser-customization/theme-color",
+			"Full Screen": "http://caniuse.com/#feat=fullscreen",
+			"Notifications": "http://w3c.github.io/push-api/"
+		}
+	}
+}
