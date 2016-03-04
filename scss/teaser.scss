@@ -2,14 +2,18 @@
 
 .teaser {
 
-	border-top: 2px solid #f7f7f7;
-	margin-top: 3em;
-	margin-bottom: 3em;
+	background: $blue;
+	border-top: 2px solid #f1f1f1;
+	margin-top: 4em;
 	padding-bottom: 30px;
 	font-size: 16px;
+	color: #fff;
+
+	font-family: Roboto, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 
 	h2 {
 		min-height: 3em;
+		font-weight: 300;
 	}
 
 	.extra-wrapper {
@@ -24,10 +28,6 @@
 		flex: 1 1 30%;
 		margin: 0 1em;
 		min-width: 16em;
-
-		p {
-			margin-top: 0;
-		}
 
 		strong {
 			font-family: $sans-serif;
@@ -57,7 +57,7 @@
 
 			font-family: $sans-serif;
 			flex-grow: 1;
-			background-image: linear-gradient(to right, $darkblue, $darkblue 50%, $blue 50%);
+			background-image: linear-gradient(to right, $darkblue, $darkblue 50%, #22A8FF 50%);
 			display: flex;
 			flex-wrap: wrap;
 			align-content: flex-start;
@@ -108,9 +108,15 @@
 				height: 3em;
 			}
 			p {
-				height: 5em;
+				height: 2em;
 			}
 		}
 	}
 
+}
+
+@media only screen and (max-width: 603px) {
+	.teaser h2 {
+		min-height: initial;
+	}
 }

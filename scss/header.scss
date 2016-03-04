@@ -1,8 +1,7 @@
 @import '_theme';
 
 .header-container {
-    background: $blue;
-    box-shadow: 0 2px 5px #aaa;
+    
 }
 
 header {
@@ -13,7 +12,6 @@ header {
     padding: 1em 0;
 
 	h1 {
-	    color: white;
 	    font-weight: 300;
 	    margin: 0;
 	    line-height: 1.4;
@@ -23,7 +21,7 @@ header {
 }
 
 nav {
-	background: $darkblue;
+	background: $blue;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -119,8 +117,19 @@ nav {
 
 @media only screen and (max-width: 768px) {
 
+	.header-container {
+		box-shadow: 0 2px 5px #aaa;
+		background: $blue;
+	}
+
+	header.wrapper {
+		position: static;
+		h1 {
+			color: white;
+		}
+	}
+
 	nav {
-		background: #0095F5;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -137,6 +146,7 @@ nav {
 		align-items: center;
 		padding: 0 1.5em;
 	}
+
 	nav.open {
 		transform: translate(0, 0);
 		opacity: 1;
@@ -147,10 +157,15 @@ nav {
 
 @media only screen and (min-width: 768px) {
 
+	.header-container {
+		margin-top: 2em;
+	}
+
 	header {
 	    h1 {
 	        font-size: 5em;
 	        line-height: 1.4;
+	        margin-bottom: -0.5em;
 	    }
 	}
 
