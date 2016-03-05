@@ -1,13 +1,15 @@
 @import '_theme';
 
 html, body {
-   margin: 0; 
+   margin: 0;
 }
 
 body {
     font:16px/1.4 $serif;
     font-weight: 400;
-    color: #222;
+    background: $bgcolor;
+    color: $fgcolor;
+    text-rendering: geometricPrecision;
 }
 
 p,h1,h2,h3,h4,h5 {
@@ -37,7 +39,7 @@ h2 a:before {
 }
 
 a {
-	color: $blue;
+	color: $linkcolor;
 }
 
 .wrapper {

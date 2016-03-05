@@ -2,8 +2,8 @@
 
 .teaser {
 
-	background: $blue;
-	border-top: 2px solid #f1f1f1;
+	background: $bgcoloralt;
+	border-top: 2px solid #438FBF;
 	margin-top: 4em;
 	padding-bottom: 30px;
 	font-size: 16px;
@@ -37,7 +37,7 @@
 
 		&.apis {
 			dl {
-				background-image: linear-gradient(to right, #FF8F00, #FF8F00 50%, #FFB700 50%);
+				background-image: linear-gradient(to right, #DA8211, #DA8211 50%, #FF8F00 50%);
 				dt {
 					color: #FFF7D9;
 				}

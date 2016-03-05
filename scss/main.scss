@@ -26,7 +26,7 @@
 
     .heading {
 
-        background: $bglight;
+        background: $bgcolorlighter;
 
         h2 {
             font-family: $display;
@@ -39,7 +39,7 @@
             color: #cecece;
 
             a {
-                color: $blue;
+                color: $linkcolor;
                 margin-right: 0.2em;
             }
 
@@ -50,30 +50,33 @@
 
 table.wrapup {
 
-    border-top: 1px solid #f7f7f7;
+    border-top: 1px solid $bgcolorlighter;
+    font-family: Roboto, sans-serif;
 
     tr td {
         padding-top: 0.3em;
         vertical-align: top;
         padding: 0.5em;
+        background: $bgcolorlighter;
     }
 
     tr:first-child td {
         padding-top:: 1em;
         &:last-child {
-            color: $darkblue;
+            color: $fgcolor;
+            background: $bgcoloralt;
         }
     }
 
     td:first-child {
         font-weight: 700;
         width: 22%;
-        background: $bglight;
+        
     }
 }
 
 aside {
-	border-left: 1px solid #f0f0f0;
+	border-left: 2px solid #232323;
     position: absolute;
     right: 0;
     top: 0;

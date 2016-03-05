@@ -1,9 +1,5 @@
 @import '_theme';
 
-.header-container {
-    
-}
-
 header {
 
 	display: flex;
@@ -21,7 +17,7 @@ header {
 }
 
 nav {
-	background: $blue;
+	background: $bgcoloralt;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -118,8 +114,8 @@ nav {
 @media only screen and (max-width: 768px) {
 
 	.header-container {
-		box-shadow: 0 2px 5px #aaa;
-		background: $blue;
+		box-shadow: 0 2px 5px #000;
+		background: $bgcoloralt;
 	}
 
 	header.wrapper {
