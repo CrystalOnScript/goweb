@@ -120,3 +120,56 @@
 		min-height: initial;
 	}
 }
+
+/* SCROLL SNAP FTW */
+@media only screen and (max-width: 603px) {
+
+	@supports ( (scroll-snap-type: mandatory) or (-webkit-scroll-snap-type: mandatory) ) {
+	    .teaser {
+
+	    	padding-bottom: 0;
+
+	    	.wrapper {
+	    		overflow: auto;
+				scroll-snap-type: mandatory;
+				scroll-snap-destination: 0% 100%;
+				scroll-snap-points-x: repeat(100%);
+				margin: 0px;
+				width: auto;
+
+				.extra-wrapper {
+					margin: 0;
+					flex-wrap: nowrap;
+				}
+
+				.box {
+					flex: 1 0 100%;
+					width: 100%;
+					margin: 0;
+					padding: 0 1em;
+					box-sizing: border-box;
+				}
+	    	}
+
+	    	.drops {
+	    		text-align: center;
+
+	    		span {
+	    			display: inline-block;
+					background: rgba(0, 0, 0, 0.2);
+					width: 8px;
+					height: 8px;
+					margin: 10px;
+					border-radius: 8px;
+					cursor: pointer;
+
+					&.active {
+						background: rgba(0, 0, 0, 0.5);
+					}
+	    		}
+	    	}
+
+	    }
+	}
+
+}
